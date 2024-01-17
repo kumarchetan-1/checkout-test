@@ -265,11 +265,6 @@
         } */
 
         .radio-conta:has(> input:checked) {
-            background-color: #ffd541;
-            font-weight: 800;
-        }
-
-        .radio-conta:first-child:has(> input:checked) {
             background-color: #F6F7F9;
             font-weight: 800;
         }
@@ -2102,7 +2097,7 @@
                 $('.total_amount > span').text(totalAmount);
                 var totAmountInNum = parseFloat(totalAmount.replace('€', ''));
                 $('.total_breakdown ').html(
-                    `<p>Tipo di articolo: <strong>${pillowType}</strong> <br> Numero di articoli: <strong>${quantity}</strong> <br>  Prezzo per un articolo: <strong>${totAmountInNum/quantity}€</strong> </p>`
+                    `<p>Tipo di articolo: <strong>${pillowType}</strong> <br> Numero di articoli: <strong>${quantity}</strong> <br>  Prezzo per un articolo: <strong>${totAmountInNum/quantity}€</strong>  <br>  Importo totale: <strong> ${totalAmount}  </strong></p>`
                 );
             }
 
@@ -2122,16 +2117,6 @@
                     label.removeClass('filled');
                 }
             });
-
-            //             $('.text-input').on('input', function (e) {
-            //     var value = e.target.value;
-            //     var label = $(e.target).siblings('label');
-            //     if (value || value.trim() !== '') {
-            //         label.addClass('filled');
-            //     } else {
-            //         label.removeClass('filled');
-            //     }
-            // });
 
             $(".total_value_conta").click(() => {
                 $(".total_breakdown").slideToggle();
